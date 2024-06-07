@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins");
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: #b6be9c;
+    /*background: rgb(35, 67, 49);
+    color: bisque;*/
+    color: #5e747f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    font-size: 20px;
+    margin: 0 10px;
+    /*color: bisque;*/
+    color: #5e747f;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: -5px;
+    bottom: -5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    z-index: -1;
+}
+
+nav a:hover::before, nav a.active::before {
+    border-color: #7b9e87;
+}
+
+nav a:hover, nav a.active {
+    font-weight: bold;
+    /*color: rgb(165, 132, 47);*/
+    color: #7b9e87;
+}
+
+.title {
+    font-size: 60px;
+    /*color: bisque;*/
+    color: #5e747f;
+    text-decoration: none;
+    font-family: 'Abril Fatface', serif;
+}
+
+section {
+    padding: 100px 20px; /* Adjust padding to ensure section content is not hidden under the fixed header */
+    min-height: 100vh; /* Ensure each section takes at least the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(21, 46, 32);*/
+    background: #e2dbbe;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600px;
+    /*font-weight: 700;*/
+}
+
+section:nth-child(odd) {
+    /*background: rgb(165, 132, 47);*/
+    /*background: #b9a864;*/
+    background: #7b9e87;
+}
+
+.devpic img{
+    width: 381px;
+}
+
+.devinfo{
+    padding: 80px;
+    color: #5e747f;
+    .hello{
+        font-size: 70px;
+    }
+
+    .name{
+        font-size: 60px;
+        font-family: "Edu TAS Beginner", cursive;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .about{
+        font-size: 44px;
+        font-weight: bolder;
+    }
+
+    .moreabout{
+        margin-top: 25px;
+        font-size: 25px;
+    }
+}
+
+.devinfo .btn{
+    height: 8vmin;
+    font-size: 18px;
+    color: #e2dbbe;
+    border-radius: 24px;
+
+    .resume, .contact{
+        background-color: #5e747f;
+    }
+
+    .resume:hover, .contact:hover{
+        background-color: #16181a;
+    }
+    
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contactForm {
+    width: 50%;
+    font-size: 35px;
+    text-align: left;
+    padding: 25px;
+}
+
+.formContent {
+    border: 2px solid #607d6a;
+    border-radius: 24px;
+    background-color: #b6be9c;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    border-color: #16181a;
+}
+
+.form-group textarea {
+    border-color: #16181a;
+}
+
+.form-group .btn{
+    background: #5e747f;
+    color: #e2dbbe;
+}
+
+.contactImage {
+    width: 50%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s, opacity 1s;
+}
+
+.contactImage.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contactImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#contact h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Reduce space between heading and content */
+    color: #5e747f; /* Beautiful blue color for the heading */
+}
+
+#blog h1{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background: #607d6a;
+}
+
+.fh5co-blog.blogitem .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fh5co-blog.animate-box {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fh5co-blog.animate-box:hover {
+    transform: translateY(-10px);
+}
+
+.blog-img-holder {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-text {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.blog-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.blog-text .posted_on,
+.blog-text .comment {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 0.875rem;
+    color: #999;
+}
+
+.blog-text .comment a {
+    color: #999;
+    text-decoration: none;
+}
+
+.blog-text .comment a:hover {
+    color: #333;
+}
+
+#about{
+    font-size: 1.2em;
+}
+
+.devmoreinfo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e2dbbe;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skillcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    background: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill i {
+    font-size: 3em;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+#service{
+    font-size: 1.2em;
+}
+
+.serviceinfo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#service h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#service p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+#service h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#service ul {
+    list-style: none;
+    color: #2c3e50;
+} 
