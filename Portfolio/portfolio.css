@@ -86,8 +86,6 @@ section {
 }
 
 section:nth-child(odd) {
-    /*background: rgb(165, 132, 47);*/
-    /*background: #b9a864;*/
     background: #7b9e87;
 }
 
@@ -217,7 +215,7 @@ section:nth-child(odd) {
 #contact h1 {
     text-align: center;
     margin-bottom: 20px; /* Reduce space between heading and content */
-    color: #5e747f; /* Beautiful blue color for the heading */
+    color: #5e747f; 
 }
 
 #blog h1{
